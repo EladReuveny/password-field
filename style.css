@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--clr-primary);
+    background-color: var(--clr-background);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+:root {
+    --clr-background: #f6f7f8;
+    --clr-primary: #132b50;
+}
+.container {
+    --clr-background: rgb(255, 255, 255);
+    --clr-box-shadow: rgb(186, 186, 186);
+    height: 80vh;
+    width: 90vh;
+    box-shadow: 0 0 10px var(--clr-box-shadow);
+    background-color: var(--clr-background);
+    border-radius: 10px;
+}
+.title {
+    padding: 25px 40px;
+    padding-bottom: 0px;
+}
+.profile-img {
+    max-width: 30%;
+    border-radius: 100%;
+}
+.details {
+    padding-left: 80px;
+    line-height: 1.35;
+    translate:  -50px 0px;
+}
+.details .details-info {
+    display: inline-block;
+    position: relative;
+    top: -25px;
+}
+.details .account-type {
+    font-weight: normal;
+    font-size: .85rem;
+}
+.details .name {
+    font-size: 1rem;
+}
+.password-container::before {
+    content: 'Password';
+    position: absolute;
+    top: 15px;
+    left: 60px;
+    font-size: .9rem;
+    transition: .2s;
+}
+.password-container:focus-within::before {
+    top: -6.5px;
+    left: 30px;
+    font-size: .7rem;
+    background-color: var(--clr-background);
+    padding-inline: 4px;
+}
+.password-container {
+    display: inline-block;
+    position: relative;
+    margin: 2px 17px;
+}
+.password-container #password {
+    padding: 13px 5px;
+    border: 1.5px solid var(--clr-primary);
+    border-radius: 6px;
+    padding-left: 40px;
+    padding-right:55px;
+    margin-right: 6px;
+}
+.password-container .fa-lock {
+    font-size: .95rem;
+    translate: 35px 2px;
+    filter:brightness(1.5);
+}
+button {
+    cursor: pointer;
+}
+.toggle-password {
+    position: relative;
+    right: 15px;
+    border: none;
+    font-size: 1.25rem;
+    background: none;
+    translate: 0 3px;
+}
+.btns-group {
+    position: relative;
+    margin: 20px 40px;
+}
+.continue-btn {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: var(--clr-primary);
+    color: var(--clr-background);
+    border-radius: 6px;
+    translate: 12px -10px;
+    transition: .3s;
+}
+.continue-btn:hover {
+    color: var(--clr-primary);
+    background-color: var(--clr-background);
+}
+.btns-group #sign-in {
+    display: inline-block;
+    height: 30px;
+    width: 50px;
+    border-radius: 100px;
+    translate: -5px 0;
+    border: 1.5px solid var(--clr-primary);
+    position: relative;
+}
+.btns-group #sign-in::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background: var(--clr-primary);
+    transition: .3s;
+}
+.btns-group #sign-in.active::after {
+    --clr-background-active: rgb(155, 238, 31);
+    background: var(--clr-background-active);
+    translate: 20px;
+}
+.btns-group #sign-in + label {
+    position: relative;
+    font-size: .9rem;
+    bottom: 10px;
+    left: -4px;
+}
+.reset-password {
+    position: relative;
+    bottom: 10px;
+    font-size: .9rem;
+    margin-left: 35px;
+    text-decoration: none;
+    transition: .3s;
+}
+.reset-password::after {
+    --clr-primary: #7ab0fb;
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--clr-primary);
+    transition: .5s;
+    transform: translateX(-50%);
+}
+.reset-password:hover::after {
+    width: 100%;
+}

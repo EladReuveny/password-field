@@ -1,0 +1,45 @@
+<html></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Password Field</title>
+</head>
+<body>
+    <section class="container">
+        <h3 class="title">Enter your password</h3>
+        <div class="details">
+            <img class="profile-img" src="https://as1.ftcdn.net/v2/jpg/05/60/26/08/500_F_560260880_O1V3Qm2cNO5HWjN66mBh2NrlPHNHOUxW.jpg" alt="Profile image">
+            <div class="details-info">
+                <div class="account-type">Business Account</div>
+                <div class="name">John</div>
+            </div>
+        </div>
+        <form action="">
+            <div class="password-container">
+                <i class="fa-solid fa-lock"></i>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    pattern="[0-9a-zA-Z]+"
+                    required
+                >
+            </div>
+                <button class="toggle-password">
+                    <i class="fa fa-eye"></i>
+                </button>
+            <div class="btns-group">
+                <div id="sign-in"></div>
+                <label for="sign-in">Stay signed in</label>
+                <button type="submit" class="continue-btn">Continue</button>
+            </div>
+            <a href="" class="reset-password">Reset password</a>
+            
+        </form>
+    </section>
+</body>
+</html>
